@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="noindex, nofollow">
+        <title>Blackjack europeo</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/styles.css?v=1.0">
+
+    </head>
+
+    <body>
+
+        <div class="row container">
+            <div class="col">
+                <h3>Crupier: <span>0</span> puntos</h3>
+                <div id="cartasCrupier" class="mano-cartas">
+                    <!-- Contenido dinámico -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row container">
+            <div class="col">
+                <h3>Jugador: <span>0</span> puntos</h3>
+                <div id="cartasJugador" class="mano-cartas">
+                    <!-- Contenido dinámico -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row container">
+            <div class="col">
+                <button id="botonNuevo" class="btn btn-primary">Nuevo juego</button>
+                <button id="botonPedir" class="btn btn-warning">Pedir carta</button>
+                <button id="botonParar" class="btn btn-danger">Plantarse</button> 
+            </div>
+        </div>
+
+        <script src="assets/js/underscore-min.js"></script>
+        <script src="assets/js/app.js?v=1.0"></script>
+
+    </body>
+
+</html>
