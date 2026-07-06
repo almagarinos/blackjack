@@ -23,6 +23,22 @@ Actualmente se puede jugar perfectamente entendiendo cómo funcionan las reglas 
 - Realizar apuestas de seguro cuando la primera carta del crupier es un as.
 
 
+## 🧾 Funcionalidades pendientes
+
+Para que esta aplicación se considere un simulador completo de blackjack real, debe incluir lo siguiente.
+
+### Apuestas 💰
+- Además del pago a la par, hay que tener en cuenta el especial de la mano "blackjack" y el de los seguros.
+
+### Jugadores 👥
+- Puede haber hasta siete puestos de jugadores, aparte del crupier. Como mínimo, se deben ocupar dos puestos de jugador.
+
+### Jugadas especiales 🎴
+- **Doblar**, también llamada "apuesta doble", "doblada" o *double down* en inglés, cuando las dos cartas iniciales suman 9, 10 u 11 puntos, y donde se obtiene solamente una carta más. Esta tercera carta que se posiciona en perpendicular a las anteriores de la mano.
+- **Separar**, también llamada "pares", "apertura", "dividir", "separar" o *split* en inglés, cuando las dos cartas iniciales tienen el mismo valor, y donde figuras y dieces cuentan como iguales, ya que todas las figuras valen 10 puntos.
+- **Asegurar**, también llamada "el seguro" o *insurance* en inglés, cuando la primera carta del crupier es un as, y donde como máximo se añade la mitad de la cantidad inicial apostada.
+
+
 ## 🎮 Jugar online
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-121013?logo=github&logoColor=white)
 
@@ -191,7 +207,7 @@ Se puede forzar la no aleatoriedad del reparto de las cartas para poder hacer pr
 Para ello, búsquese "pruebas" en el archivo `blackjack/assets/js/app.js` para encontrar este comentario:
 
 ```JS
-// Descomentando las dos siguientes líneas se pueden hacer pruebas [...]
+// Descomentando las dos siguientes líneas se pueden hacer pruebas forzando casuísticas
 ```
 
 Siguiendo el patrón descrito anteriormente para nombrar las cartas, se pueden provocar las manos deseadas para cubrir todas las posibilidades en el testeo de la aplicación. Por ejemplo, si dejamos esas dos líneas descomentadas tal que así:
@@ -202,7 +218,6 @@ console.table( mazo );
 ```
 
 Entonces, lo que se muestra por consola es el mazo completo de cartas que se tiene previsto repartir y, a continuación, los datos de la jugada según lo habitual. Vemos que en este caso aún queda por repartir la carta `8C` del mazo, sin embargo, en concordancia con las reglas del blackjack, el crupier debe parar en `7H` su reparto porque ya alcanzó 17 puntos o más:
-
 
 |`(index)`				|`Value`				|
 |-----------------------|-----------------------|

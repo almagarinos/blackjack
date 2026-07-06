@@ -1,11 +1,11 @@
 /* Variables globales */
 let mazo, puntosCrupier, puntosJugador, manoCrupier, manoJugador;
 
-// (ENG) Clubs, Diamonds, Hearts, Spaces | (ESP) Tréboles, Diamantes, Corazones, Picas
+// (ENG) Clubs, Diamonds, Hearts, Spades | (ESP) Tréboles, Diamantes, Corazones, Picas
 const palos = ['C','D','H','S'];
 // (ENG) Ace, Jack, Queen, King | (ESP) As, Jota, Reina, Rey
 const asYfiguras = ['A','J','Q','K'];
-// Número de barajas usadas en el mazo. Lo habitual es seis.
+// Número de barajas usadas en el mazo. Lo habitual son seis.
 const numBarajas = 6;
 
 // Contenido dinámico
@@ -80,7 +80,7 @@ const contarAses = ( manoCartas ) => {
 }
 
 
-// Contempla que los ases pueden valer 1, es decir, 10 puntos menos que el valor inical de 11.
+// Contempla que los ases pueden valer 1, es decir, 10 puntos menos que el valor inicial de 11.
 const calcularRestaPorAses = ( manoCartas ) => {
     let numAses = contarAses(manoCartas);
     let duplaDeRestos;
@@ -254,7 +254,7 @@ btnNuevo.addEventListener('click', () => {
     // Se completa el mazo ya barajado
     mazo = crearMazo();
 
-    // Descomentando las dos siguientes líneas se pueden hacer pruebas forzando causuísticas
+    // Descomentando las dos siguientes líneas se pueden hacer pruebas forzando casuísticas
     //mazo = ['7D','5C','AD','AC','2H','10H','AS','QD','AH','QS'];
     //console.table( mazo );
 
@@ -266,7 +266,7 @@ btnNuevo.addEventListener('click', () => {
     puntosCrupier = 0;
     puntosJugador = 0;
     
-    // Se ponen a cero los maracadores
+    // Se ponen a cero los marcadores
     recuentoPuntos[0].innerText = 0;
     recuentoPuntos[1].innerText = 0;
 
