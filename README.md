@@ -5,13 +5,13 @@ Juego de cartas de casino, en su modalidad clásica europea, implementado como a
 En ningún momento de este proyecto se realizarán apuestas con dinero real, siempre serán cantidades ficticias.
 
 
-## 📈 Versión 1.0.0
+## 📈 Versión 1.0.2
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)
 ![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=fff)
 
-Esta es la primera versión estable del proyecto, desarrollada únicamente con tecnologías Front-End nativas: JavaScript, HTML y CSS. Se importa la librería Bootstrap, pero la aplicación no requiere de procesos de compilación ni instalación de dependencias.
+Esta es una versión estable del proyecto, desarrollada únicamente con tecnologías Front-End nativas: JavaScript, HTML y CSS. Se importa la librería Bootstrap, pero la aplicación no requiere de procesos de compilación ni instalación de dependencias.
 
 Se ha testeado con éxito en pantallas de smartphones y laptops. Si en algún caso sale scroll, se recomienda ajustar al 90 % el zoom del navegador, mediante `Ctrl`+`-`, por ejemplo.
 
@@ -23,20 +23,15 @@ Actualmente se puede jugar perfectamente entendiendo cómo funcionan las reglas 
 - Realizar apuestas de seguro cuando la primera carta del crupier es un as.
 
 
-## 🧾 Funcionalidades pendientes
+### Funcionalidades pendientes 🧾
 
-Para que esta aplicación se considere un simulador completo de blackjack real, debe incluir lo siguiente.
+Para que esta aplicación se considere un simulador completo de blackjack real, debe incluir los siguientes puntos en detalle.
 
-### Apuestas 💰
-- Además del pago a la par, hay que tener en cuenta el especial de la mano "blackjack" y el de los seguros.
-
-### Jugadores 👥
-- Puede haber hasta siete puestos de jugadores, aparte del crupier. Como mínimo, se deben ocupar dos puestos de jugador.
-
-### Jugadas especiales 🎴
-- **Doblar**, también llamada "apuesta doble", "doblada" o *double down* en inglés, cuando las dos cartas iniciales suman 9, 10 u 11 puntos, y donde se obtiene solamente una carta más. Esta tercera carta que se posiciona en perpendicular a las anteriores de la mano.
-- **Separar**, también llamada "pares", "apertura", "dividir", "separar" o *split* en inglés, cuando las dos cartas iniciales tienen el mismo valor, y donde figuras y dieces cuentan como iguales, ya que todas las figuras valen 10 puntos.
-- **Asegurar**, también llamada "el seguro" o *insurance* en inglés, cuando la primera carta del crupier es un as, y donde como máximo se añade la mitad de la cantidad inicial apostada.
+- 💰 **Apuestas**. Además del pago a la par, hay que tener en cuenta el pago especial de las manos que tengan blackjack y el de los seguros.
+- 👥 **Jugadores**. Puede haber hasta siete puestos de jugadores, aparte del crupier. Como mínimo, se deben ocupar dos puestos de jugador.
+- 2️⃣ **Doblar**. Jugada especial también llamada "apuesta doble", "doblada" o *double down* en inglés, cuando las dos cartas iniciales suman 9, 10 u 11 puntos, y donde se obtiene solamente una carta más. Esta tercera carta se posiciona en perpendicular a las anteriores de la mano.
+- ➗ **Separar**. Jugada especial también llamada "pares", "apertura", "dividir", "separar" o *split* en inglés, cuando las dos cartas iniciales tienen el mismo valor, y donde figuras y dieces cuentan como iguales, ya que todas las figuras valen 10 puntos.
+- ✅ **Asegurar**. Jugada especial también llamada "el seguro" o *insurance* en inglés, cuando la primera carta del crupier es un as, y donde como máximo se añade la mitad de la cantidad inicial apostada.
 
 
 ## 🎮 Jugar online
@@ -71,6 +66,9 @@ blackjack/
 ├── assets/
 │   ├── css/
 │   │   └── styles.css          # Estilos propios de la aplicación
+│   │
+│   ├── icon/                   # Archivos para el favicon en distinos formatos
+│   │   └── ...
 │   │
 │   ├── img/                    # Imágenes de las 52 cartas de la baraja francesa
 │   │   ├── 10C.png             # En este ejemplo: 10 de "clubs" (tréboles)
