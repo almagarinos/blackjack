@@ -5,7 +5,7 @@ Juego de cartas de casino, en su modalidad clásica europea, implementado como a
 En ningún momento de este proyecto se realizarán apuestas con dinero real, siempre serán cantidades ficticias.
 
 
-## 📈 Versión 1.0.2
+## 📈 Versión 1.0.3
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)
 ![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff)
@@ -40,6 +40,21 @@ Para que esta aplicación se considere un simulador completo de blackjack real, 
 Disponible tras su despliegue en GitHub Pages:
 
 👉 https://almagarinos.github.io/blackjack/ 👈
+
+### Teclas de acceso directo ⌨
+Cada botón de la aplicación tiene una letra subrayada en su texto. Si en nuestro teclado pulsamos la tecla correspondiente a esa letra, tendremos el mismo efecto que pulsando en dicho botón.
+
+También se le asigna a cada botón la tecla de un número, del 1 al 6, en el mismo orden en que están distribuidos, de izquierda a derecha y de arriba abajo.
+
+Por tanto, quedan así asignadas las teclas a los botones:
+- `1`, `A` y `a`: "Readme de la **a**pp".
+- `2`, `R` y `r`: "**R**eglas".
+- `3`, `T` y `t`: "**T**utorial".
+- `4`, `N` y `n`: "**N**uevo juego".
+- `5`, `C` y `c`: "Pedir **c**arta".
+- `6`, `P` y `p`: "**P**lantarse".
+
+Importante: lo que aquí son letras en negrita, en la aplicación son letras subrayadas.
 
 
 ## 💻 Instalación local

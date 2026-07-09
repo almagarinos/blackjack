@@ -14,6 +14,9 @@ const divCartasCrupier = document.querySelector('#cartasCrupier');
 const divCartasJugador = document.querySelector('#cartasJugador');
 
 // Botones de la aplicación
+const btnInfo = document.querySelector('#botonInfo');
+const btnReglas = document.querySelector('#botonReglas');
+const btnTutorial = document.querySelector('#botonTutorial');
 const btnNuevo = document.querySelector('#botonNuevo');
 const btnPedir = document.querySelector('#botonPedir');
 const btnParar = document.querySelector('#botonParar');
@@ -255,8 +258,8 @@ btnNuevo.addEventListener('click', () => {
     mazo = crearMazo();
 
     // Descomentando las dos siguientes líneas se pueden hacer pruebas forzando casuísticas
-    //mazo = ['7D','5C','AD','AC','2H','10H','AS','QD','AH','QS'];
-    //console.table( mazo );
+    mazo = ['AS','AH','AD','AD','AC','AS','6S','AH','AD','AC','AS','AH','AD','AC','AS','AH','AD','AC','AS','AH','AD','2H','AC','AS','AH','AD','AC','AS','AH','AD','AC','AS','AH'];
+    console.table( mazo );
 
     // Se vacían las manos de cartas
     manoCrupier = [];
@@ -297,4 +300,27 @@ btnNuevo.addEventListener('click', () => {
             btnParar.disabled = false;
         }
     }, 1500 );
+});
+
+
+/* Gestión de teclas asignadas a botones */
+window.addEventListener('keyup', (event) => {
+    if (event.key === 'a' || event.key === 'A' || event.key === '1') {
+        btnInfo.click();
+    }
+    if (event.key === 'r' || event.key === 'R' || event.key === '2') {
+        btnReglas.click();
+    }
+    if (event.key === 't' || event.key === 'T' || event.key === '3') {
+        btnTutorial.click();
+    }
+    if (event.key === 'n' || event.key === 'N' || event.key === '4') {
+        btnNuevo.click();
+    }
+    if (event.key === 'c' || event.key === 'C' || event.key === '5') {
+        btnPedir.click();
+    }
+    if (event.key === 'p' || event.key === 'P' || event.key === '6') {
+        btnParar.click();
+    }
 });
