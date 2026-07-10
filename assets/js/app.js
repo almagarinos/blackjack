@@ -258,8 +258,8 @@ btnNuevo.addEventListener('click', () => {
     mazo = crearMazo();
 
     // Descomentando las dos siguientes líneas se pueden hacer pruebas forzando casuísticas
-    mazo = ['AS','AH','AD','AD','AC','AS','6S','AH','AD','AC','AS','AH','AD','AC','AS','AH','AD','AC','AS','AH','AD','2H','AC','AS','AH','AD','AC','AS','AH','AD','AC','AS','AH'];
-    console.table( mazo );
+    //mazo = ['AS','AH','AD','AD','AC','AS','6S','AH','AD','AC','AS','AH','AD','AC','AS','AH','AD','AC','AS','AH','AD','2H','AC','AS','AH','AD','AC','AS','AH','AD','AC','AS','AH'];
+    //console.table( mazo );
 
     // Se vacían las manos de cartas
     manoCrupier = [];
