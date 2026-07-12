@@ -133,12 +133,22 @@ const mostrarCarta = ( deQuien ) => {
     if (deQuien == "del crupier") {
         divCartasCrupier.append( imgCarta );
         manoCrupier.push( carta );
+        // Si se excede del ancho, se desplaza hasta la última carta
+        divCartasCrupier.scrollTo({
+            left: divCartasCrupier.scrollWidth,
+            behavior: 'smooth'
+        });
         puntosCrupier = calcularPuntosDeMano( manoCrupier );
         recuentoPuntos[0].innerText = puntosCrupier;
 
     } else if (deQuien == "del jugador") {
         divCartasJugador.append( imgCarta );
         manoJugador.push( carta );
+        // Si se excede del ancho, se desplaza hasta la última carta
+        divCartasJugador.scrollTo({
+            left: divCartasJugador.scrollWidth,
+            behavior: 'smooth'
+        });
         puntosJugador = calcularPuntosDeMano( manoJugador );
         recuentoPuntos[1].innerText = puntosJugador;
 
@@ -258,8 +268,8 @@ btnNuevo.addEventListener('click', () => {
     mazo = crearMazo();
 
     // Descomentando las dos siguientes líneas se pueden hacer pruebas forzando casuísticas
-    //mazo = ['AS','AH','AD','AD','AC','AS','6S','AH','AD','AC','AS','AH','AD','AC','AS','AH','AD','AC','AS','AH','AD','2H','AC','AS','AH','AD','AC','AS','AH','AD','AC','AS','AH'];
-    //console.table( mazo );
+    // mazo = ['AS','AH','AD','AD','AC','AS','6S','AH','AD','AC','AS','AH','AD','AC','AS','AH','AD','AC','AS','AH','AD','2H','AC','AS','AH','AD','AC','AS','AH','AD','AC','AS','AH'];
+    // console.table( mazo );
 
     // Se vacían las manos de cartas
     manoCrupier = [];
