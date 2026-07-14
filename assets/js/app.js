@@ -12,14 +12,17 @@ const numBarajas = 6;
 const recuentoPuntos = document.querySelectorAll('span');
 const divCartasCrupier = document.querySelector('#cartasCrupier');
 const divCartasJugador = document.querySelector('#cartasJugador');
+const dialogInfo = document.querySelector('#dialogoInfo');
+const txtResultado = document.querySelector('#textoResultado');
 
 // Botones de la aplicación
-const btnInfo = document.querySelector('#botonInfo');
-const btnReglas = document.querySelector('#botonReglas');
+const btnResultado = document.querySelector('#botonResultado');
+const btnReadme = document.querySelector('#botonReadme');
 const btnTutorial = document.querySelector('#botonTutorial');
 const btnNuevo = document.querySelector('#botonNuevo');
 const btnPedir = document.querySelector('#botonPedir');
 const btnParar = document.querySelector('#botonParar');
+const btnContinuar = document.querySelector('#botonContinuar');
 
 
 /* Se inicializa la aplicación permitiendo solamente pulsar el botón "Nuevo juego" */
@@ -205,8 +208,8 @@ const evaluarMarcador = () => {
         resultado = '¡El crupier gana con la mejor mano de cartas!';
     }
 
-    // En una futura versión de la app, el siguiente mensaje se podría mostrar sin usar este alert()
-    alert(resultado);
+    txtResultado.innerHTML = resultado;
+    dialogInfo.showModal();
 
     // En una futura versión de la app, los siguientes datos se podrían almacenar en un historial
     console.table ({
@@ -241,6 +244,16 @@ const turnoCrupier = () => {
 
 
 /* Gestión de eventos de botones */
+btnResultado.addEventListener('click', () => {
+    dialogInfo.showModal();
+});
+
+
+btnContinuar.addEventListener('click', () => {
+    dialogInfo.close();
+});
+
+
 btnParar.addEventListener('click', () => {
     turnoCrupier();
 });
@@ -268,7 +281,7 @@ btnNuevo.addEventListener('click', () => {
     mazo = crearMazo();
 
     // Descomentando las dos siguientes líneas se pueden hacer pruebas forzando casuísticas
-    // mazo = ['AS','AH','AD','AD','AC','AS','6S','AH','AD','AC','AS','AH','AD','AC','AS','AH','AD','AC','AS','AH','AD','2H','AC','AS','AH','AD','AC','AS','AH','AD','AC','AS','AH'];
+    // mazo = ['8C','7H','6C','AD','5H','QS'];
     // console.table( mazo );
 
     // Se vacían las manos de cartas
@@ -313,24 +326,30 @@ btnNuevo.addEventListener('click', () => {
 });
 
 
-/* Gestión de teclas asignadas a botones */
+/* Gestión de teclas asignadas a botones como accesos directos, con atención al estado del dialog */
 window.addEventListener('keyup', (event) => {
-    if (event.key === 'a' || event.key === 'A' || event.key === '1') {
-        btnInfo.click();
-    }
-    if (event.key === 'r' || event.key === 'R' || event.key === '2') {
-        btnReglas.click();
-    }
-    if (event.key === 't' || event.key === 'T' || event.key === '3') {
-        btnTutorial.click();
-    }
-    if (event.key === 'n' || event.key === 'N' || event.key === '4') {
-        btnNuevo.click();
-    }
-    if (event.key === 'c' || event.key === 'C' || event.key === '5') {
-        btnPedir.click();
-    }
-    if (event.key === 'p' || event.key === 'P' || event.key === '6') {
-        btnParar.click();
+    if ( !dialogInfo.open ) {
+        if (event.key === 'e' || event.key === 'E') {
+            btnResultado.click();
+        }
+        if (event.key === 'r' || event.key === 'R') {
+            btnReadme.click();
+        }
+        if (event.key === 't' || event.key === 'T') {
+            btnTutorial.click();
+        }
+        if (event.key === 'n' || event.key === 'N' || event.key === '1' || event.key === 'ArrowLeft') {
+            btnNuevo.click();
+        }
+        if (event.key === 'c' || event.key === 'C' || event.key === '2' || event.key === 'ArrowDown') {
+            btnPedir.click();
+        }
+        if (event.key === 'p' || event.key === 'P' || event.key === '3' || event.key === 'ArrowRight') {
+            btnParar.click();
+        }
+    } else {
+        if (event.key === 'o' || event.key === 'O' || event.key === '5' || event.key === 'ArrowUp') {
+            btnContinuar.click();
+        }
     }
 });

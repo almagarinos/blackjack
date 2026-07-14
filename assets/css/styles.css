@@ -32,3 +32,13 @@ body {
 .btn:disabled {
     cursor: not-allowed;
 }
+
+#dialogoInfo {
+    border-width: 1px;
+    border-radius: .5rem;
+    background-color: #fdf5e6;
+}
+
+#dialogoInfo::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}

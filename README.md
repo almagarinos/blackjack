@@ -5,7 +5,7 @@ Juego de cartas de casino, en su modalidad clásica europea, implementado como a
 En ningún momento de este proyecto se realizarán apuestas con dinero real, siempre serán cantidades ficticias.
 
 
-## 📈 Versión 1.0.4
+## 📈 Versión 1.1.0
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)
 ![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff)
@@ -13,7 +13,7 @@ En ningún momento de este proyecto se realizarán apuestas con dinero real, sie
 
 Esta es una versión estable del proyecto, desarrollada únicamente con tecnologías Front-End nativas: JavaScript, HTML y CSS. Se importa la librería Bootstrap, pero la aplicación no requiere de procesos de compilación ni instalación de dependencias.
 
-Se ha testeado con éxito en pantallas de smartphones y laptops. Si en algún caso sale scroll, se recomienda ajustar al 90 % el zoom del navegador, mediante `Ctrl`+`-`, por ejemplo.
+Se ha testeado con éxito en pantallas de *smartphones* y *laptops*. Si en algún caso sale *scroll*, se recomienda ajustar al 90 % el *zoom* del navegador, mediante `Ctrl`+`-`, por ejemplo.
 
 Actualmente se puede jugar perfectamente entendiendo cómo funcionan las reglas para ganar, empatar o perder, pero todavía no se han implementado estas funcionalidades:
 - Posibilidad de realizar apuestas indicando las cantidades.
@@ -25,34 +25,37 @@ Actualmente se puede jugar perfectamente entendiendo cómo funcionan las reglas 
 
 ### Funcionalidades pendientes 🧾
 
-Para que esta aplicación se considere un simulador completo de blackjack real, debe incluir los siguientes puntos en detalle.
+Para que esta aplicación se considere un simulador completo de *blackjack* real, debe incluir los siguientes puntos en detalle.
 
-- 💰 **Apuestas**. Además del pago a la par, hay que tener en cuenta el pago especial de las manos que tengan blackjack y el de los seguros.
+- 💰 **Apuestas**. Además del pago a la par, hay que tener en cuenta el pago especial de las manos que tengan *blackjack* y el de los seguros.
 - 👥 **Jugadores**. Puede haber hasta siete puestos de jugadores, aparte del crupier. Como mínimo, se deben ocupar dos puestos de jugador.
 - 2️⃣ **Doblar**. Jugada especial también llamada "apuesta doble", "doblada" o *double down* en inglés, cuando las dos cartas iniciales suman 9, 10 u 11 puntos, y donde se obtiene solamente una carta más. Esta tercera carta se posiciona en perpendicular a las anteriores de la mano.
 - ➗ **Separar**. Jugada especial también llamada "pares", "apertura", "dividir", "separar" o *split* en inglés, cuando las dos cartas iniciales tienen el mismo valor, y donde figuras y dieces cuentan como iguales, ya que todas las figuras valen 10 puntos.
 - ✅ **Asegurar**. Jugada especial también llamada "el seguro" o *insurance* en inglés, cuando la primera carta del crupier es un as, y donde como máximo se añade la mitad de la cantidad inicial apostada.
 
 
-## 🎮 Jugar online
+## 🎮 Jugar *online*
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-121013?logo=github&logoColor=white)
 
-Disponible tras su despliegue en GitHub Pages:
+Gracias al despliegue en GitHub Pages, se puede jugar aquí:
 
 👉 https://almagarinos.github.io/blackjack/ 👈
 
 ### Teclas de acceso directo ⌨
 Cada botón de la aplicación tiene una letra subrayada en su texto. Si en nuestro teclado pulsamos la tecla correspondiente a esa letra, tendremos el mismo efecto que pulsando en dicho botón.
 
-También se le asigna a cada botón la tecla de un número, del 1 al 6, en el mismo orden en que están distribuidos, de izquierda a derecha y de arriba abajo.
+Por ejemplo, el cuadro de diálogo del resultado se cierra con el botón "C**o**ntinuar", que tiene la letra **o** subrayada. Pues ese botón también puede activarse pulsando la tecla de la letra **o**, mayúscula y minúscula.
 
-Por tanto, quedan así asignadas las teclas a los botones:
-- `1`, `A` y `a`: "Readme de la **a**pp".
-- `2`, `R` y `r`: "**R**eglas".
-- `3`, `T` y `t`: "**T**utorial".
-- `4`, `N` y `n`: "**N**uevo juego".
-- `5`, `C` y `c`: "Pedir **c**arta".
-- `6`, `P` y `p`: "**P**lantarse".
+Además, para una mayor comodidad, se han buscado combinaciones de teclas juntas entre sí. Por un lado, la de las letras contiguas `E` `R` `T` para los botones superiores. Para los inferiores y el de "C**o**ntinuar", que son los más usados, también se les ha asignado la combinación de las flechas ⬅⬇➡⬆ y los números 1️⃣2️⃣3️⃣5️⃣, los cuales, en el teclado numérico, siguen el mismo patrón triangular que las flechas.
+
+Por tanto, quedan asignadas a los botones las teclas de estos símbolos:
+- Letras `E` y `e`: "R**e**sultado previo".
+- Letras `R` y `r`: "**R**eadme".
+- Letras `T` y `t`: "**T**utorial".
+- Letras `N` y `n`, número `1` y flecha `⬅`: "**N**uevo juego".
+- Letras `C` y `c`, número `2` y flecha `⬇`: "Pedir **c**arta".
+- Letras `P` y `p`, número `3` y flecha `➡`: "**P**lantarse".
+- Letras `O` y `o`, número `5` y flecha `⬆`: "C**o**ntinuar".
 
 Importante: lo que aquí son letras en negrita, en la aplicación son letras subrayadas.
 
@@ -82,7 +85,7 @@ blackjack/
 │   ├── css/
 │   │   └── styles.css          # Estilos propios de la aplicación
 │   │
-│   ├── icon/                   # Archivos para el favicon en distinos formatos
+│   ├── icon/                   # Archivos para el favicon en distintos formatos
 │   │   └── ...
 │   │
 │   ├── img/                    # Imágenes de las 52 cartas de la baraja francesa
@@ -108,16 +111,16 @@ Se utiliza la función `_.shuffle()` de la librería **Underscore.js** para bara
 
 
 ## 📒 Reglas del juego
-El objetivo es sumar un valor lo más próximo a 21 puntos sin pasarse. Las cartas numéricas suman su valor, las figuras suman 10 y el as vale 11 o 1.
+El objetivo es sumar un valor lo más próximo a 21 puntos sin pasarse. Las cartas con índice numérico suman su propio valor, todas las figuras valen 10 puntos y cada as vale 11 o 1.
 
 A continuación se detallan dos opciones para aprender a jugar. La primera está pensada para acceder a estas reglas cuando no se disponga de conexión a Internet, una vez descargado el proyecto en local.
 
 ### Leer en PDF 📋
-Se pueden consultar en [este PDF](https://almagarinos.github.io/blackjack/assets/pdf/rules.pdf), el cual también está adjunto en la ruta `blackjack/assets/pdf/rules.pdf`.
+Se puede consultar [este PDF](https://almagarinos.github.io/blackjack/assets/pdf/rules.pdf) que viene adjunto en la ruta `blackjack/assets/pdf/rules.pdf` del proyecto.
 
 ### Ver videotutorial ▶️
 
-Se puede visualizar [este vídeo](https://www.youtube.com/watch?v=q1JwKw_c4r0) de 10 minutos, perfectamente explicado, relativo a [esta guía](https://www.casino.es/blackjack/) muy completa.
+Se puede visualizar [este vídeo](https://www.youtube.com/watch?v=q1JwKw_c4r0) de 10 minutos, perfectamente explicado, relativo a [esta guía](https://www.casino.es/blackjack/) aún más completa.
 
 
 ## ❓ Glosario y nomenclatura
@@ -146,10 +149,10 @@ Esta nomenclatura se usa en las imágenes de `blackjack/assets/img/` y en los da
 
 
 ## 👨‍💻 Datos por consola
-En la versión actual, la aplicación muestra información por consola tras resolver cada jugada. Para verla, hay que acceder a las herramientas de desarrollador (DevTools) del navegador, idealmente en un dispositivo de sobremesa (Desktop). Para ello, desde la propia pestaña abierta de la aplicación, pulsaremos F12 para abrir dichas herramientas, cuya opción "Console" es la que debemos seleccionar.
+En la versión actual, la aplicación muestra información por consola tras resolver cada jugada. Para verla, hay que acceder a las herramientas de desarrollador (*DevTools*) del navegador, idealmente en un dispositivo de sobremesa (*desktop*). Para ello, desde la propia pestaña abierta de la aplicación, pulsamos F12 para abrir dichas herramientas, cuya opción "Console" es la que debemos seleccionar.
 
 En ella se mostrarán tres tipos de mensaje:
-- Detección de blackjacks, si los hubiese.
+- Detección de *blackjacks*, si los hubiese.
 - Tabla con todos los datos de la jugada.
 - Resultado con el resumen de la jugada.
 
@@ -230,7 +233,7 @@ mazo = ['8C','7H','6C','AD','5H','QS'];
 console.table( mazo );
 ```
 
-Entonces, lo que se muestra por consola es el mazo completo de cartas que se tiene previsto repartir y, a continuación, los datos de la jugada según lo habitual. Vemos que en este caso aún queda por repartir la carta `8C` del mazo, sin embargo, en concordancia con las reglas del blackjack, el crupier debe parar en `7H` su reparto porque ya alcanzó 17 puntos o más:
+Entonces, lo que se muestra por consola es el mazo completo de cartas que se tiene previsto repartir y, a continuación, los datos de la jugada según lo habitual. Vemos que en este caso aún queda por repartir la carta `8C` del mazo, sin embargo, en concordancia con las reglas del *blackjack*, el crupier debe parar en `7H` su reparto porque ya alcanzó 17 puntos o más:
 
 |`(index)`				|`Value`				|
 |-----------------------|-----------------------|

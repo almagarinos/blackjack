@@ -11,7 +11,7 @@
         
         <!-- Estilos -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/css/styles.css?v=1.0">
+        <link rel="stylesheet" href="assets/css/styles.css?v=1.1">
         
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
@@ -26,8 +26,8 @@
 
         <div class="row container">
             <div class="col mb-1">
-                <a id="botonInfo" href="https://github.com/almagarinos/blackjack#blackjack" target="_blank" class="btn btn-info mr-1">Readme de la <u>a</u>pp</a>
-                <a id="botonReglas" href="assets/pdf/rules.pdf" target="_blank" class="btn btn-info mr-1"><u>R</u>eglas</a>
+                <button id="botonResultado" class="btn btn-info mr-1">R<u>e</u>sultado previo</button>
+                <a id="botonReadme" href="https://github.com/almagarinos/blackjack#blackjack" target="_blank" class="btn btn-info mr-1"><u>R</u>eadme</a>
                 <a id="botonTutorial" href="https://www.youtube.com/watch?v=q1JwKw_c4r0" target="_blank" class="btn btn-info"><u>T</u>utorial</a> 
             </div>
         </div>
@@ -58,8 +58,14 @@
             </div>
         </div>
 
+        <dialog id="dialogoInfo">
+            <h4>Último resultado:</h4>
+            <p id="textoResultado">Aún no se ha terminado la primera partida...</p>
+            <button id="botonContinuar" class="btn btn-info">C<u>o</u>ntinuar</button>
+        </dialog>
+
         <script src="assets/js/underscore-min.js"></script>
-        <script src="assets/js/app.js?v=1.0"></script>
+        <script src="assets/js/app.js?v=1.1"></script>
 
     </body>
 
