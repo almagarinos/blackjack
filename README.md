@@ -5,13 +5,13 @@ Juego de cartas de casino, en su modalidad clásica europea, implementado como a
 En ningún momento de este proyecto se realizarán apuestas con dinero real, siempre serán cantidades ficticias.
 
 
-## 📈 Versión 1.1.0
+## 📈 Versión 1.1.1
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)
 ![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=fff)
 
-Esta es una versión estable del proyecto, desarrollada únicamente con tecnologías Front-End nativas: JavaScript, HTML y CSS. Se importa la librería Bootstrap, pero la aplicación no requiere de procesos de compilación ni instalación de dependencias.
+Esta es una versión estable del proyecto, desarrollada únicamente con tecnologías Front-End nativas: JavaScript, HTML y CSS. Se utiliza la librería Bootstrap en local y la aplicación no necesita procesos de compilación, ni instalación de dependencias, ni conexión a Internet.
 
 Se ha testeado con éxito en pantallas de *smartphones* y *laptops*. Si en algún caso sale *scroll*, se recomienda ajustar al 90 % el *zoom* del navegador, mediante `Ctrl`+`-`, por ejemplo.
 
@@ -83,6 +83,7 @@ blackjack/
 │
 ├── assets/
 │   ├── css/
+│   │   ├── bootstrap.min.css   # Librería Bootstrap v4.4.1
 │   │   └── styles.css          # Estilos propios de la aplicación
 │   │
 │   ├── icon/                   # Archivos para el favicon en distintos formatos
@@ -105,7 +106,7 @@ blackjack/
 
 ## 🛠️ Herramientas auxiliares
 
-Se importa la librería de estilos **Bootstrap** en la cabedera `<head>` del archivo **index.html**. Se aplica en las fuentes de texto, disposición de componentes y aspecto de botones.
+Se utiliza la librería de estilos **Bootstrap**, llamada en la cabedera `<head>` del archivo **index.html**. Se aplica en las fuentes de texto, disposición de componentes y aspecto de botones.
 
 Se utiliza la función `_.shuffle()` de la librería **Underscore.js** para barajar las cartas. Véase más información en [este blog](https://www.javascriptroom.com/blog/underscore-js-shuffle-function/) y en su [documentación oficial](https://underscorejs.org/#shuffle).
 
