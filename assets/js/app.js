@@ -17,7 +17,7 @@ const txtResultado = document.querySelector('#textoResultado');
 
 // Botones de la aplicación
 const btnResultado = document.querySelector('#botonResultado');
-const btnReadme = document.querySelector('#botonReadme');
+const btnReglas = document.querySelector('#botonReglas');
 const btnTutorial = document.querySelector('#botonTutorial');
 const btnNuevo = document.querySelector('#botonNuevo');
 const btnPedir = document.querySelector('#botonPedir');
@@ -333,7 +333,7 @@ window.addEventListener('keyup', (event) => {
             btnResultado.click();
         }
         if (event.key === 'r' || event.key === 'R') {
-            btnReadme.click();
+            btnReglas.click();
         }
         if (event.key === 't' || event.key === 'T') {
             btnTutorial.click();
