@@ -5,7 +5,7 @@ Juego de cartas de casino, en su modalidad clásica europea, implementado como a
 En ningún momento de este proyecto se realizarán apuestas con dinero real, siempre serán cantidades ficticias.
 
 
-## 📈 Versión 1.1.1
+## 📈 Versión 1.1.2
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000) ![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff) ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=fff)
 
 Esta es una versión estable del proyecto, desarrollada únicamente con tecnologías Front-End nativas: JavaScript, HTML y CSS. Se utiliza la librería Bootstrap en local y la aplicación no necesita procesos de compilación, ni instalación de dependencias, ni conexión a Internet.
